@@ -22,6 +22,7 @@ PRODUCT_MODEL := realme Monet
 PRODUCT_MANUFACTURER := realme
 
 TARGET_BOOT_ANIMATION_RES := 720
+TARGET_SUPPORTS_QUICK_TAP := true
 
 # Build info
 BUILD_FINGERPRINT := "google/coral/coral:12/SP2A.220305.012/8177914:user/release-keys"
