@@ -21,3 +21,6 @@
 
 # Audio
 /dev/sia81xx_tuning_if 	u:object_r:sia81xx_tuning_if_device:s0
+
+# LiveDisplay HAL
+/(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@[0-9]\.[0-9]-service-RMX2020    u:object_r:hal_lineage_livedisplay_mediatek_exec:s0

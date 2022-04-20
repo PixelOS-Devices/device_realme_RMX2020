@@ -11,3 +11,6 @@ genfscon proc /fp_id u:object_r:proc_oppo_fp:s0
 
 # Audio
 genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
+
+# Livedisplay
+genfscon sysfs /devices/platform/mtk_disp_mgr.0/rgb u:object_r:sysfs_livedisplay_tuneable:s0
