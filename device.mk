@@ -202,7 +202,7 @@ PRODUCT_PACKAGES += \
 
 # LiveDisplay
 PRODUCT_PACKAGES += \
-    lineage.livedisplay@2.0-service-mediatek
+    lineage.livedisplay@2.0-service-RMX2020
 
 # Media
 PRODUCT_COPY_FILES += \
