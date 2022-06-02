@@ -223,6 +223,7 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     libnl \
+    libavservices_minijail \
     libavservices_minijail_vendor \
     libavservices_minijail.vendor
 
