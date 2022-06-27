@@ -332,7 +332,6 @@ PRODUCT_PACKAGES += \
 
 # Rootdir
 PRODUCT_PACKAGES += \
-    perf_profile.sh \
     init.connectivity.rc \
     init.modem.rc \
     init.mt6768.rc \
