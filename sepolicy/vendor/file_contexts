@@ -24,3 +24,6 @@
 
 # LiveDisplay HAL
 /(vendor|system/vendor)/bin/hw/vendor\.lineage\.livedisplay@[0-9]\.[0-9]-service-RMX2020    u:object_r:hal_lineage_livedisplay_mediatek_exec:s0
+
+# Vibrator
+/vendor/bin/hw/android\.hardware\.vibrator-service\.RMX2020                                                             u:object_r:hal_vibrator_default_exec:s0

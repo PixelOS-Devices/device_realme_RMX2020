@@ -405,7 +405,7 @@ PRODUCT_PACKAGES += \
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.vibrator-V2-ndk_platform.vendor
+    android.hardware.vibrator-service.RMX2020
 
 # VNDK
 PRODUCT_COPY_FILES += \
