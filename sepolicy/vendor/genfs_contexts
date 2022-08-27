@@ -14,3 +14,6 @@ genfscon sysfs /devices/platform/sia81xx@L u:object_r:sysfs_sia81xx_file:s0
 
 # Livedisplay
 genfscon sysfs /devices/platform/mtk_disp_mgr.0/rgb u:object_r:sysfs_livedisplay_tuneable:s0
+
+# Vibrator
+genfscon sysfs /kernel/thunderquake_engine/level    u:object_r:sysfs_vibrator:s0
