@@ -52,7 +52,6 @@ PRODUCT_PACKAGES += \
     libbundlewrapper \
     libdownmix \
     libtinycompress \
-    libtinyxml \
     libalsautils \
     libnbaio_mono
 
@@ -376,10 +375,6 @@ PRODUCT_PACKAGES += \
 # Text classifier
 PRODUCT_PACKAGES += \
     libtextclassifier_hash.vendor
-
-# TinyXML
-PRODUCT_PACKAGES += \
-    libtinyxml
 
 # USB
 PRODUCT_PACKAGES += \
