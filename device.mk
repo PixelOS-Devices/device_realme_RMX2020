@@ -366,7 +366,7 @@ PRODUCT_SOONG_NAMESPACES += $(DEVICE_PATH)
 
 # Camera
 PRODUCT_PACKAGES += \
-    GCamGOPrebuilt
+    Aperture
 
 # Symbols
 PRODUCT_PACKAGES += \
