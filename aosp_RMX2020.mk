@@ -19,7 +19,7 @@ $(call inherit-product, vendor/aosp/config/common_full_phone.mk)
 PRODUCT_NAME := aosp_RMX2020
 PRODUCT_DEVICE := RMX2020
 PRODUCT_BRAND := realme
-PRODUCT_MODEL := realme Monet
+PRODUCT_MODEL := RMX2020
 PRODUCT_MANUFACTURER := realme
 
 PRODUCT_SYSTEM_MODEL := RMX2020
