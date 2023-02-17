@@ -343,7 +343,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayRMX2020 \
     CarrierConfigOverlayRMX2020 \
-    DialerOverlayRMX2020 \
     DocumentsUIOverlayRMX2020 \
     FrameworksResOverlayRMX2020 \
     SettingsOverlayRMX2020 \
