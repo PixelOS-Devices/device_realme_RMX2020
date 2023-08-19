@@ -324,7 +324,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     ApertureOverlayRMX2020 \
     CarrierConfigOverlayRMX2020 \
-    DocumentsUIOverlayRMX2020 \
     FingerprintFrameworksResOverlayRMX2020 \
     FingerprintSystemUIOverlayRMX2020 \
     FrameworksResOverlayRMX2020 \
