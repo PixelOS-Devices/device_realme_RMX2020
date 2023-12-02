@@ -57,6 +57,28 @@ void property_override(char const prop[], char const value[]) {
         __system_property_add(prop, strlen(prop), value, strlen(value));
 }
 
+void init_fingerprint_properties() {
+    char const *fingerprint_id_file = "/proc/fp_id";
+    std::string fingerprint_id;
+
+    if(ReadFileToString(fingerprint_id_file, &fingerprint_id)) {
+        /*
+        * There are two fingerprint sensors used on this device:
+        * 
+        * 1. Egistec/et512 sensor
+        * 2. Silead sensor
+        *
+        * Silead fingerprint sensor works fine with OPLUS Fingerprint 
+        * wrapper. But Egistec fingerprint sensor doesn't work with 
+        * the same OPLUS Fingerprint wrapper. So we want to set a 
+        * property to differ between both sensors.
+        */
+        if (fingerprint_id == "E_512" || fingerprint_id == "E_520") {
+            property_override("persist.vendor.fingerprint.fp_id", "egis");
+        }
+    }
+}
+
 void init_operator_name_properties() {
     char const *operator_name_file = "/proc/oppoVersion/operatorName";
     std::string operator_name;
@@ -90,6 +112,7 @@ void set_avoid_gfxaccel_config() {
 
 void vendor_load_properties() {
     set_avoid_gfxaccel_config();
+    init_fingerprint_properties();
     init_operator_name_properties();
 #ifdef __ANDROID_RECOVERY__
     std::string buildtype = GetProperty("ro.build.type", "userdebug");

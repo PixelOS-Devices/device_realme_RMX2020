@@ -5,3 +5,7 @@ service vendor.fps_hal.RMX2020 /vendor/bin/hw/android.hardware.biometrics.finger
     class late_start
     user system
     group system input uhid
+
+on property:persist.vendor.fingerprint.fp_id=egis
+	stop fps_hal
+	stop vendor.fps_hal.RMX2020
