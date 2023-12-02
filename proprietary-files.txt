@@ -675,6 +675,13 @@ odm/lib64/vendor.oplus.hardware.biometrics.fingerprint@2.1.so
 odm/lib64/vendor.oplus.hardware.biometrics.fingerprintservice@1.0.so
 odm/lib64/vendor.oplus.hardware.commondcs@1.0.so
 
+# Fingerprint - from RMX2020-user 10 QP1A.190711.020 RMX2020_11.A.77 release-keys
+vendor/lib64/libRbsFlow.so|e8e94fb07e58f2c1b3c3f78c633519c99c8b3a74
+vendor/lib64/vendor.egistec.hardware.fingerprint@4.0.so|c340db37e5b775ab91e7f10c40ed59640f2e1070
+
+# Fingerprint - from moto_troika 9/PSB29.105-27/fd362:user/release-keys
+vendor/bin/hw/android.hardware.biometrics.fingerprint@2.1-service-rbs|5e911347a23958d7d1c74ede7020ac7f166037f6
+
 # Firmware
 vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_FullLog.bin
 vendor/firmware/customfilter/catcher_filter_1_ulwctg_n_PLS_PS_ONLY.bin

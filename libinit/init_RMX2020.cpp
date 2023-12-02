@@ -73,8 +73,8 @@ void init_fingerprint_properties() {
         * the same OPLUS Fingerprint wrapper. So we want to set a 
         * property to differ between both sensors.
         */
-        if (fingerprint_id == "E_512" || fingerprint_id == "E_520") {
-            property_override("persist.vendor.fingerprint.fp_id", "egis");
+        if (fingerprint_id == "E_520") {
+            property_override("persist.vendor.fingerprint.fp_id", "E_520");
         }
     }
 }
