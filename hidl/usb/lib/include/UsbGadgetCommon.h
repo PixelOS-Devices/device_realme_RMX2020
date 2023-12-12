@@ -71,7 +71,7 @@ constexpr char kVendorConfig[] = "vendor.usb.config";
 #define FUNCTIONS_PATH GADGET_PATH "functions/"
 #define FUNCTION_NAME "function"
 #define FUNCTION_PATH CONFIG_PATH FUNCTION_NAME
-#define RNDIS_PATH FUNCTIONS_PATH "gsi.rndis"
+#define RNDIS_PATH FUNCTIONS_PATH "rndis.gs4"
 
 using ::android::base::GetProperty;
 using ::android::base::SetProperty;

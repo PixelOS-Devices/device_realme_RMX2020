@@ -123,36 +123,14 @@ Status resetGadget() {
     return Status::SUCCESS;
 }
 
-Status addGenericAndroidFunctions(MonitorFfs* monitorFfs, uint64_t functions, bool* ffsEnabled,
-                                  int* functionCount) {
-    if (((functions & GadgetFunction::MTP) != 0)) {
-        *ffsEnabled = true;
-        ALOGI("setCurrentUsbFunctions mtp");
-        if (!WriteStringToFile("1", DESC_USE_PATH)) return Status::ERROR;
-
-        if (!monitorFfs->addInotifyFd("/dev/usb-ffs/mtp/")) return Status::ERROR;
-
-        if (linkFunction("ffs.mtp", (*functionCount)++)) return Status::ERROR;
-
-        // Add endpoints to be monitored.
-        monitorFfs->addEndPoint("/dev/usb-ffs/mtp/ep1");
-        monitorFfs->addEndPoint("/dev/usb-ffs/mtp/ep2");
-        monitorFfs->addEndPoint("/dev/usb-ffs/mtp/ep3");
-    } else if (((functions & GadgetFunction::PTP) != 0)) {
-        *ffsEnabled = true;
-        ALOGI("setCurrentUsbFunctions ptp");
-        if (!WriteStringToFile("1", DESC_USE_PATH)) return Status::ERROR;
-
-        if (!monitorFfs->addInotifyFd("/dev/usb-ffs/ptp/")) return Status::ERROR;
-
-        if (linkFunction("ffs.ptp", (*functionCount)++)) return Status::ERROR;
-
-        // Add endpoints to be monitored.
-        monitorFfs->addEndPoint("/dev/usb-ffs/ptp/ep1");
-        monitorFfs->addEndPoint("/dev/usb-ffs/ptp/ep2");
-        monitorFfs->addEndPoint("/dev/usb-ffs/ptp/ep3");
+Status addGenericAndroidFunctions(uint64_t functions, int* functionCount) {
+    if ((functions & GadgetFunction::MTP) != 0) {
+        ALOGI("setCurrentUsbFunctions MTP");
+        if (linkFunction("mtp.gs0", (*functionCount)++)) return Status::ERROR;
+    } else if ((functions & GadgetFunction::PTP) != 0) {
+        ALOGI("setCurrentUsbFunctions PTP");
+        if (linkFunction("ptp.gs1", (*functionCount)++)) return Status::ERROR;
     }
-
     if ((functions & GadgetFunction::MIDI) != 0) {
         ALOGI("setCurrentUsbFunctions MIDI");
         if (linkFunction("midi.gs5", (*functionCount)++)) return Status::ERROR;
@@ -170,23 +148,13 @@ Status addGenericAndroidFunctions(MonitorFfs* monitorFfs, uint64_t functions, bo
 
     if ((functions & GadgetFunction::RNDIS) != 0) {
         ALOGI("setCurrentUsbFunctions rndis");
-        if (linkFunction("gsi.rndis", (*functionCount)++)) return Status::ERROR;
+        if (linkFunction("rndis.gs4", (*functionCount)++)) return Status::ERROR;
     }
 
-    return Status::SUCCESS;
-}
-
-Status addAdb(MonitorFfs* monitorFfs, int* functionCount) {
-    ALOGI("setCurrentUsbFunctions Adb");
-    if (!WriteStringToFile("1", DESC_USE_PATH))
-        return Status::ERROR;
-
-    if (!monitorFfs->addInotifyFd("/dev/usb-ffs/adb/")) return Status::ERROR;
-
-    if (linkFunction("ffs.adb", (*functionCount)++)) return Status::ERROR;
-    monitorFfs->addEndPoint("/dev/usb-ffs/adb/ep1");
-    monitorFfs->addEndPoint("/dev/usb-ffs/adb/ep2");
-    ALOGI("Service started");
+    if ((functions & GadgetFunction::ADB) != 0) {
+        ALOGI("setCurrentUsbFunctions ADB");
+        if (linkFunction("ffs.adb", (*functionCount)++)) return Status::ERROR;
+    }
     return Status::SUCCESS;
 }
 
