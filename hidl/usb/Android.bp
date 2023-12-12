@@ -22,6 +22,7 @@ cc_binary {
     srcs: [
         "service.cpp",
         "Usb.cpp",
+        "UsbGadget.cpp",
     ],
 
     shared_libs: [
@@ -31,5 +32,8 @@ cc_binary {
         "libutils",
         "libhardware",
         "android.hardware.usb@1.0",
+        "android.hardware.usb.gadget@1.0",
+        "android.hardware.usb.gadget@1.1",
     ],
+    static_libs: ["libusbconfigfs_RMX2020"],
 }

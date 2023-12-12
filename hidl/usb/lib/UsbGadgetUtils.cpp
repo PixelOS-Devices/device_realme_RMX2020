@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "libusbconfigfs"
+#define LOG_TAG "libusbconfigfs_RMX2020"
 
 #include "include/UsbGadgetCommon.h"
 
