@@ -111,7 +111,7 @@ PRODUCT_PACKAGES += \
 
 # Doze
 PRODUCT_PACKAGES += \
-    OplusDoze
+    OplusDoze_RMX2020
 
 # DRM
 PRODUCT_PACKAGES += \

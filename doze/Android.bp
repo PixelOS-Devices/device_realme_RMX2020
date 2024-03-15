@@ -1,5 +1,5 @@
 android_app {
-    name: "OplusDoze",
+    name: "OplusDoze_RMX2020",
     defaults: ["SettingsLibDefaults"],
 
     srcs: ["src/**/*.kt"],
