@@ -265,8 +265,7 @@ PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/handheld_core_hardware.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/handheld_core_hardware.xml
 
 # Power
-PRODUCT_PACKAGES += \
-    android.hardware.power-service.mediatek-libperfmgr
+$(call inherit-product, hardware/oplus/power-libperfmgr/power-libperfmgr.mk)
 
 PRODUCT_PACKAGES += \
     libmtkperf_client_vendor \
@@ -353,9 +352,8 @@ PRODUCT_COPY_FILES += \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    hardware/google/interfaces \
-    hardware/google/pixel \
     hardware/mediatek \
+    hardware/oplus \
     $(DEVICE_PATH)
 
 # Text classifier
