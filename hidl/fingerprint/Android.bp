@@ -24,7 +24,7 @@ cc_binary {
         "libutils",
         "libbase",
         "android.hardware.biometrics.fingerprint@2.1",
-        "vendor.oplus.hardware.biometrics.fingerprint@2.1",
+        "vendor.oplus.hardware.biometrics.fingerprint@2.1-RMX2020",
     ],
 vendor: true
 }
